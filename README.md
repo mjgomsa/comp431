@@ -4,6 +4,7 @@ My repo for Comp431: Internet Services &amp; Protocols
 ## HW1
 First Steps of the Construction of a Mail Server — Parsing in Python.
 This program takes input strings from a "client" and evaluates if they're part of the SMTP grammar:
+```
 <mail-from-cmd> ::= “MAIL” <SP> “FROM:” <reverse-path> <CRLF>
 <reverse-path> ::= <path>
  <path> ::= "<" <mailbox> ">"
@@ -24,3 +25,4 @@ This program takes input strings from a "client" and evaluates if they're part o
  <SP> ::= the space or tab character
  <special> ::= "<" | ">" | "(" | ")" | "[" | "]" | "\" | "."
  | "," | ";" | ":" | "@" | """
+```
