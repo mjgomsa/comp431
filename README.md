@@ -26,3 +26,12 @@ This program takes input strings from a "client" and evaluates if they're part o
  <special> ::= "<" | ">" | "(" | ")" | "[" | "]" | "\" | "."
  | "," | ";" | ":" | "@" | """
 ```
+## HW2
+Extension of the program in Homework 1 to parse more SMTPcommands. Now includes “RCPT TO” and “DATA” commands. Additionally, the program processes the DATA command to receive and store the contents of a mail message in a file. Possible responses:
+```
+500 Syntax error: command unrecognized
+501 Syntax error in parameters or arguments
+503 Bad sequence of commands
+354 Start mail input; end with <CRLF>.<CRLF>
+250 OK
+```
