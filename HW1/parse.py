@@ -1,3 +1,5 @@
+# MJ Gomez-Saavedra (PID:730270625)
+# Honor Pledge: I herby pledge that no disallowed help was received in my complition of this assignment.
 
 import sys
 
@@ -291,6 +293,9 @@ def findOccurances(s, char):
 
 # <element> :== <letter> | <name>
 def parseElement(s):
+    if (parseDigit(s[0]) is True):
+        return 13
+
     if (parseName(s) == 0):
         return 0 
     else: 
