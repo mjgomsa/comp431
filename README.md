@@ -1,7 +1,7 @@
-# comp431
-My repo for Comp431: Internet Services &amp; Protocols
+# Server-Client
+SMTP server, SMTP client and SMTP parser that interoperate over a network by using a TCP sockets.
 
-## HW1
+## Part 1
 First Steps of the Construction of a Mail Server — Parsing in Python.
 This program takes input strings from a "client" and evaluates if they're part of the SMTP grammar:
 ```
@@ -26,8 +26,8 @@ This program takes input strings from a "client" and evaluates if they're part o
  <special> ::= "<" | ">" | "(" | ")" | "[" | "]" | "\" | "."
  | "," | ";" | ":" | "@" | """
 ```
-## HW2
-Extension of the program in Homework 1 to parse more SMTP commands. Now includes “RCPT TO” and “DATA” commands. Additionally, the program processes the DATA command to receive and store the contents of a mail message in a file. Possible responses:
+## Part 2
+Extension of the program in Part 1 to parse more SMTP commands. Now includes “RCPT TO” and “DATA” commands. Additionally, the program processes the DATA command to receive and store the contents of a mail message in a file. Possible responses:
 ```
 500 Syntax error: command unrecognized
 501 Syntax error in parameters or arguments
@@ -36,8 +36,8 @@ Extension of the program in Homework 1 to parse more SMTP commands. Now includes
 250 OK
 ```
 
-## HW3
-This is the Server-side processing. The program reads a forward-file (from that of HW2) and generates and writes to standard output the SMTP messages necessary to send the contents of the mail messages in the forward-file to a destination SMTP server. It both generates SMTP server messages and listens for the SMTP response messages that a real server would emit. For example:
+## Part 3
+This is the Server-side processing. The program reads a forward-file (from that of Part 2) and generates and writes to standard output the SMTP messages necessary to send the contents of the mail messages in the forward-file to a destination SMTP server. It both generates SMTP server messages and listens for the SMTP response messages that a real server would emit. For example:
 ```
 MAIL FROM: <mjgomsa@cs.unc.edu>
 250 OK
@@ -54,7 +54,7 @@ Hey! This is some random text signifying an email's body :)
 250 OK
 ```
 
-## HW4
+## Part 4
 This program is the glue to all the previously made programs. It is made up of two programs: the SMTP “server” and the SMTP “client". As real clients and servers, these programs interoperate over a network by using a TCP socket (https://docs.python.org/3/howto/sockets.html).
 In order to run these programs they need to be ran in different hosts (for instance local host '127.0.0.1' and port number 8625):
 ```
